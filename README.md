@@ -488,6 +488,4 @@ WARNING, the custom version is **not** an official release, download only if inv
 
 
 ## ❗ Disclaimer
-This project, its contents are not affiliated with, funded, authorized, endorsed by, or in any way associated with YouTube, Google LLC or any of its affiliates, subsidiaries.
-
-Any trademark, service mark, trade name, or other intellectual property rights used in this project are owned by the respective owners.
+This project, is for educational purpose
