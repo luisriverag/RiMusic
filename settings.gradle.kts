@@ -29,8 +29,6 @@ rootProject.name = "RiMusic"
 include(":composeApp")
 include(":compose-persist")
 // Projects from extensions
-include(":environment")
-project(":environment").projectDir = file("extensions/environment")
 include(":ktor-client-brotli")
 project(":ktor-client-brotli").projectDir = file("extensions/ktor-client-brotli")
 include(":kugou")
