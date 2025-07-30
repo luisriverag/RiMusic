@@ -7,7 +7,7 @@
 
 </div>
 
-## ❗ Disclaimer
+## ❗ Info
 This project, is closed.
 
 ## ✨ Features
