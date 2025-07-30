@@ -103,13 +103,6 @@ WARNING, the custom version is **not** an official release, download only if inv
 - [Community on Reddit](https://www.reddit.com/r/RiMusicApp/)
 
 
-## 🤝 Contributing
-**Pull requests are welcome**
-- If you want:
-    - to **develop new functions** or **fix a bug**, fork the repository, send a pull request.
-    - to **translate** or **improve a translation** read the section Translations
-
-
 ### 🔤 Translations
 - Go to [Crowdin](https://crowdin.com/project/rimusic/invite?h=73f0e6b64be1c64a8aebd467d286cf851925330), help with the translations.
 
