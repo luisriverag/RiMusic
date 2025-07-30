@@ -1,24 +1,20 @@
 <div align="center">
   <img src="./assets/design/latest/app_logo.svg" width="300" height="100" />    
-  <p><b>RiMusic</b> is a <b>multilingual</b> and <b>multiplatform</b> extensible offline player.</p>
+  <p><b>RiMusic</b> is a <b>multilingual</b> and <b>multiplatform</b> music player.</p>
 <p><b>RiMusic does not collect any data.</b></p>
-<p>App not available. Don't get fooled!!</p>
 
-  <a href="https://github.com/fast4x/RiMusic/releases"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/total?label=Total%20Downloads"></a>
-  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/latest/total?label=Downloads%20of%20latest%20Release"></a>
-  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/v/release/fast4x/RiMusic?label=Release"></a>
+
+<a href="https://github.com/fast4x/RiMusic/releases"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/total?label=Total%20Downloads"></a>
+<a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/latest/total?label=Downloads%20of%20latest%20Release"></a>
+<a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/v/release/fast4x/RiMusic?label=Release"></a>
 </div>
 
-## ❗ IMPORTANT
-<div align="center"><b><H1>RiMusic turns into an extensible offline player. App not available. Don't get fooled!!</H1></b></div>  
-
 ## ❗ Disclaimer
-The developer of this project is not liable for any misuse or legal issues arising from its use and is not affiliated with any content providers. 
+The developer of this project is not liable for any misuse or legal issues arising from its use and is not affiliated with any content providers.
 <br>This project hosts zero content.
-<br>This project does not condone piracy. 
+<br>This project does not condone piracy.
 <br>This project is created strictly for educational purposes.
 
-<!--
 ## ✨ Features
 - **Multilingual:** English, Italian, German, Russian, French, Spanish, Czech, Turkish, Romanian and more. Contributions for other languages are welcome
 - UI Mode, swtich from RiMusic to classic ViMusic style, viceversa
@@ -109,8 +105,6 @@ The developer of this project is not liable for any misuse or legal issues arisi
 WARNING, the custom version is **not** an official release, download only if invited by the developer!
 [Go to custom version](https://github.com/fast4x/RiMusic/tree/master/customVersion)
 
--->
-
 ## ❓ FAQs
 - [Wiki page FAQs](https://github.com/fast4x/RiMusic/wiki/FAQs)
 - [Group on Telegram ](https://t.me/rimusic_app_official)
@@ -120,14 +114,13 @@ WARNING, the custom version is **not** an official release, download only if inv
 ## 🤝 Contributing
 **Pull requests are welcome**
 - If you want:
-    - to **develop new functions** or **fix a bug**, fork the repository, send a pull request.
-    - to **translate** or **improve a translation** read the section Translations
+  - to **develop new functions** or **fix a bug**, fork the repository, send a pull request.
+  - to **translate** or **improve a translation** read the section Translations
 
 
 ### 🔤 Translations
 - Go to [Crowdin](https://crowdin.com/project/rimusic/invite?h=73f0e6b64be1c64a8aebd467d286cf851925330), help with the translations.
 
-<!--
 ### 🤝 **Developer /../ Designer that contribute:**
 
 <table>
@@ -454,37 +447,9 @@ WARNING, the custom version is **not** an official release, download only if inv
             <sub style="font-size:14px"><b>Rohith Pai</b></sub>
         </a>
     </td>
-    
+
 </tr>
 </table>
--->
-<!--
-- [25huizengek1](https://github.com/25huizengek1)
-- [821938089](https://github.com/821938089)
-- [aneesh1122](https://github.com/aneesh1122)
-- [Abhinavreddy-B](https://github.com/Abhinavreddy-B)
-- [bbyeen](https://github.com/bbyeen)
-- [Craeckie](https://github.com/Craeckie)
-- [DanielSevillano](https://github.com/DanielSevillano)
-- [fast4x](https://github.com/fast4x)
-- [ikanakova](https://github.com/ikanakova)
-- [iscle](https://github.com/iscle)
-- [jaimtres](https://github.com/jaimtres)
-- [JZITNIK](https://github.com/jzitnik-dev)
-- [KyNarec](https://github.com/KyNarec)
-- [knighthat](https://github.com/knighthat)
-- [locxter](https://github.com/locxter)
-- [lrusso96](https://github.com/lrusso96)
-- [martkol](https://github.com/martkol)
-- [ov1d1u ](https://github.com/ov1d1u)
-- [roklc](https://github.com/roklc)
-- [sharunkumar](https://github.com/sharunkumar/sharunkumar)
-- [SuhasDissa](https://github.com/SuhasDissa)
-- [twistios](https://github.com/twistios)
-- [wispl](https://github.com/wispl)
-- [chayotic](https://github.com/chayotic)
--->  
-
 
 ## 🫂 Acknowledgments
 - [**ViMusic**](https://github.com/vfsfitvnm/ViMusic)
@@ -498,6 +463,5 @@ WARNING, the custom version is **not** an official release, download only if inv
 - [**KuGou**](https://www.kugou.com): Lyrics provider
 - [**LrcLib**](https://lrclib.net): Lyrics provider
 - [**HypnoticCanvas**](https://mikepenz.github.io/HypnoticCanvas/): A shader modifier for Compose Multiplatform / Jetpack Compose
-
 
 
