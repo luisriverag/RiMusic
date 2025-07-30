@@ -10,9 +10,6 @@
 ## ✨ Features
 - **Multilingual:** English, Italian, German, Russian, French, Spanish, Czech, Turkish, Romanian and more. Contributions for other languages are welcome
 - UI Mode, swtich from RiMusic to classic ViMusic style, viceversa
-- Auto cache songs for offline playback with a custom cache size
-- Download songs or entire playlists for offline playback (not cache) 
-- Background playback
 - Listening statistics
 - Audio visualizer on player with many type of effects.
   - THIS FEATURE REQUIRES MIC PERMISSION, ONLY AVAILABLE IF ACTIVATED FROM SETTINGS. [Full list of permissions](https://github.com/fast4x/RiMusic/wiki/FAQs#what-permissions-are-used)
@@ -444,33 +441,6 @@ WARNING, the custom version is **not** an official release, download only if inv
     
 </tr>
 </table>
-<!--
-- [25huizengek1](https://github.com/25huizengek1)
-- [821938089](https://github.com/821938089)
-- [aneesh1122](https://github.com/aneesh1122)
-- [Abhinavreddy-B](https://github.com/Abhinavreddy-B)
-- [bbyeen](https://github.com/bbyeen)
-- [Craeckie](https://github.com/Craeckie)
-- [DanielSevillano](https://github.com/DanielSevillano)
-- [fast4x](https://github.com/fast4x)
-- [ikanakova](https://github.com/ikanakova)
-- [iscle](https://github.com/iscle)
-- [jaimtres](https://github.com/jaimtres)
-- [JZITNIK](https://github.com/jzitnik-dev)
-- [KyNarec](https://github.com/KyNarec)
-- [knighthat](https://github.com/knighthat)
-- [locxter](https://github.com/locxter)
-- [lrusso96](https://github.com/lrusso96)
-- [martkol](https://github.com/martkol)
-- [ov1d1u ](https://github.com/ov1d1u)
-- [roklc](https://github.com/roklc)
-- [sharunkumar](https://github.com/sharunkumar/sharunkumar)
-- [SuhasDissa](https://github.com/SuhasDissa)
-- [twistios](https://github.com/twistios)
-- [wispl](https://github.com/wispl)
-- [chayotic](https://github.com/chayotic)
--->  
-
 
 ## 🫂 Acknowledgments
 - [**ViMusic**](https://github.com/vfsfitvnm/ViMusic)
