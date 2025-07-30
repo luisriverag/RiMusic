@@ -87,6 +87,7 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
 
+            implementation(projects.environment)
             implementation(projects.piped)
             implementation(projects.invidious)
 
@@ -552,6 +553,7 @@ dependencies {
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
 
+    implementation(projects.environment)
     implementation(projects.kugou)
     implementation(projects.lrclib)
     implementation(projects.piped)

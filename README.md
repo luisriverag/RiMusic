@@ -1,24 +1,19 @@
 <div align="center">
   <img src="./assets/design/latest/app_logo.svg" width="300" height="100" />    
-  <p><b>RiMusic</b> is a <b>multilingual</b> and <b>multiplatform</b> music player.</p>
+  <p><b>RiMusic</b> is a <b>multilingual</b> Android application for streaming music.</p>
+  <p>It began as an <b>extension</b> of <b>ViMusic</b>, then acquired its own identity.</p>
+<p><b>It allows the user to customize it at will.</b></p>
 <p><b>RiMusic does not collect any data.</b></p>
 
-
-<a href="https://github.com/fast4x/RiMusic/releases"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/total?label=Total%20Downloads"></a>
-<a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/latest/total?label=Downloads%20of%20latest%20Release"></a>
-<a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/v/release/fast4x/RiMusic?label=Release"></a>
+  <a href="https://github.com/fast4x/RiMusic/releases"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/total?label=Total%20Downloads"></a>
+  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/latest/total?label=Downloads%20of%20latest%20Release"></a>
+  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/v/release/fast4x/RiMusic?label=Release"></a>
 </div>
-
-## ❗ Disclaimer
-The developer of this project is not liable for any misuse or legal issues arising from its use and is not affiliated with any content providers.
-<br>This project hosts zero content.
-<br>This project does not condone piracy.
-<br>This project is created strictly for educational purposes.
 
 ## ✨ Features
 - **Multilingual:** English, Italian, German, Russian, French, Spanish, Czech, Turkish, Romanian and more. Contributions for other languages are welcome
 - UI Mode, swtich from RiMusic to classic ViMusic style, viceversa
-- Auto cache songs for offline playback with a custom cache size, ONLY IF THE SPECIFIC PLATFORM ALLOWS
+- Auto cache songs for offline playback with a custom cache size
 - Download songs or entire playlists for offline playback (not cache) 
 - Background playback
 - Listening statistics
@@ -107,15 +102,15 @@ WARNING, the custom version is **not** an official release, download only if inv
 
 ## ❓ FAQs
 - [Wiki page FAQs](https://github.com/fast4x/RiMusic/wiki/FAQs)
-- [Group on Telegram ](https://t.me/rimusic_app_official)
+- [Group on Telegram ](https://t.me/rimusic_app)
 - [Community on Reddit](https://www.reddit.com/r/RiMusicApp/)
-
+- [Server on Discord](https://discord.gg/h7eS2PcGeW)
 
 ## 🤝 Contributing
 **Pull requests are welcome**
 - If you want:
-  - to **develop new functions** or **fix a bug**, fork the repository, send a pull request.
-  - to **translate** or **improve a translation** read the section Translations
+    - to **develop new functions** or **fix a bug**, fork the repository, send a pull request.
+    - to **translate** or **improve a translation** read the section Translations
 
 
 ### 🔤 Translations
@@ -127,9 +122,9 @@ WARNING, the custom version is **not** an official release, download only if inv
 <tr>
     <td align="center" style="word-wrap: break-word; width: 90.0; height: 90.0">
         <a href=https://github.com/fast4x>
-            <img src=https://avatars.githubusercontent.com/u/1484476?v=4 width="60;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Fast4x/>
+            <img src=https://avatars.githubusercontent.com/u/1484476?v=4 width="60;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Rino Russo/>
             <br />
-            <sub style="font-size:14px"><b>Fast4x</b></sub>
+            <sub style="font-size:14px"><b>Rino Russo</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 90.0; height: 90.0">
@@ -447,9 +442,36 @@ WARNING, the custom version is **not** an official release, download only if inv
             <sub style="font-size:14px"><b>Rohith Pai</b></sub>
         </a>
     </td>
-
+    
 </tr>
 </table>
+<!--
+- [25huizengek1](https://github.com/25huizengek1)
+- [821938089](https://github.com/821938089)
+- [aneesh1122](https://github.com/aneesh1122)
+- [Abhinavreddy-B](https://github.com/Abhinavreddy-B)
+- [bbyeen](https://github.com/bbyeen)
+- [Craeckie](https://github.com/Craeckie)
+- [DanielSevillano](https://github.com/DanielSevillano)
+- [fast4x](https://github.com/fast4x)
+- [ikanakova](https://github.com/ikanakova)
+- [iscle](https://github.com/iscle)
+- [jaimtres](https://github.com/jaimtres)
+- [JZITNIK](https://github.com/jzitnik-dev)
+- [KyNarec](https://github.com/KyNarec)
+- [knighthat](https://github.com/knighthat)
+- [locxter](https://github.com/locxter)
+- [lrusso96](https://github.com/lrusso96)
+- [martkol](https://github.com/martkol)
+- [ov1d1u ](https://github.com/ov1d1u)
+- [roklc](https://github.com/roklc)
+- [sharunkumar](https://github.com/sharunkumar/sharunkumar)
+- [SuhasDissa](https://github.com/SuhasDissa)
+- [twistios](https://github.com/twistios)
+- [wispl](https://github.com/wispl)
+- [chayotic](https://github.com/chayotic)
+-->  
+
 
 ## 🫂 Acknowledgments
 - [**ViMusic**](https://github.com/vfsfitvnm/ViMusic)
@@ -457,6 +479,7 @@ WARNING, the custom version is **not** an official release, download only if inv
 - **RiMusic previous Logo, many current icons from** [@ikanakova](https://github.com/ikanakova)
 - **RiMusic Website, other features from** [JZITNIK-github](https://github.com/JZITNIK-github), [martkol](https://github.com/martkol)
 - **RiMusic New player, lyrics layouts from** [aneesh1122](https://github.com/aneesh1122)
+- [**YouTube-Internal-Clients**](https://github.com/zerodytrash/YouTube-Internal-Clients): A python script that discovers hidden YouTube API clients. Just a research project.
 - [**Ionicons**](https://github.com/ionic-team/ionicons): Premium hand-crafted icons built by Ionic, for Ionic apps, web apps everywhere.
 - [**FlatIcon.com**](https://www.flaticon.com/): Download Free Icons, Stickers for your projects. Resources made by, for designers.
 - [**Translator**](https://github.com/therealbush/translator): A simple, free Google Translate library for Kotlin/JVM, Java.
@@ -465,3 +488,7 @@ WARNING, the custom version is **not** an official release, download only if inv
 - [**HypnoticCanvas**](https://mikepenz.github.io/HypnoticCanvas/): A shader modifier for Compose Multiplatform / Jetpack Compose
 
 
+## ❗ Disclaimer
+This project, its contents are not affiliated with, funded, authorized, endorsed by, or in any way associated with YouTube, Google LLC or any of its affiliates, subsidiaries.
+
+Any trademark, service mark, trade name, or other intellectual property rights used in this project are owned by the respective owners.
