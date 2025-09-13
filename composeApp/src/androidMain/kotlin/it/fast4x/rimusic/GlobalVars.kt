@@ -6,6 +6,7 @@ import androidx.compose.runtime.ReadOnlyComposable
 import it.fast4x.rimusic.enums.AudioQualityFormat
 import it.fast4x.rimusic.enums.ColorPaletteMode
 import it.fast4x.rimusic.enums.DnsOverHttpsType
+import it.fast4x.rimusic.enums.StreamingPlayerType
 import it.fast4x.rimusic.enums.UiType
 import it.fast4x.rimusic.enums.ViewType
 import it.fast4x.rimusic.ui.styling.LocalAppearance
@@ -27,6 +28,7 @@ import it.fast4x.rimusic.utils.rememberPreference
 import it.fast4x.rimusic.utils.showButtonPlayerVideoKey
 import it.fast4x.rimusic.utils.showSearchTabKey
 import it.fast4x.rimusic.utils.showStatsInNavbarKey
+import it.fast4x.rimusic.utils.streamingPlayerTypeKey
 import it.fast4x.rimusic.utils.useYtLoginOnlyForBrowseKey
 import it.fast4x.rimusic.utils.viewTypeKey
 import it.fast4x.rimusic.utils.ytAccountNameKey
@@ -59,6 +61,7 @@ fun getAudioQualityFormat() = appContext().preferences.getEnum(audioQualityForma
 fun getViewType() = appContext().preferences.getEnum(viewTypeKey, ViewType.Grid)
 fun getDnsOverHttpsType() = appContext().preferences.getEnum(dnsOverHttpsTypeKey, DnsOverHttpsType.None)
 fun getUiType() = appContext().preferences.getEnum(UiTypeKey, UiType.RiMusic)
+fun getStreamingPlayerType() = appContext().preferences.getEnum(streamingPlayerTypeKey, StreamingPlayerType.Advanced)
 
 fun ytAccountName() = appContext().preferences.getString(ytAccountNameKey, "")
 fun ytAccountThumbnail() = appContext().preferences.getString(ytAccountThumbnailKey, "")

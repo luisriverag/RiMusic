@@ -260,6 +260,8 @@ import it.fast4x.rimusic.utils.volumeBoostLevelKey
 import java.net.Proxy
 import androidx.core.net.toUri
 import androidx.core.text.isDigitsOnly
+import it.fast4x.rimusic.enums.StreamingPlayerType
+import it.fast4x.rimusic.utils.streamingPlayerTypeKey
 
 
 @ExperimentalAnimationApi
@@ -277,7 +279,7 @@ fun GeneralSettings(
         exoPlayerMinTimeForEventKey,
         ExoPlayerMinTimeForEvent.`20s`
     )
-    var persistentQueue by rememberPreference(persistentQueueKey, false)
+    var persistentQueue by rememberPreference(persistentQueueKey, true)
     var resumePlaybackOnStart by rememberPreference(resumePlaybackOnStartKey, false)
     var closebackgroundPlayer by rememberPreference(closebackgroundPlayerKey, false)
     var closeWithBackButton by rememberPreference(closeWithBackButtonKey, true)
@@ -373,6 +375,7 @@ fun GeneralSettings(
     var proxyPort by rememberPreference(proxyPortKey, 1080)
     var proxyMode by rememberPreference(proxyModeKey, Proxy.Type.HTTP)
     var customDnsOverHttpsServer by rememberPreference(customDnsOverHttpsServerKey, "")
+    var streamingPlayerType by rememberPreference(streamingPlayerTypeKey, StreamingPlayerType.Advanced)
 
     Column(
         modifier = Modifier
@@ -621,6 +624,19 @@ fun GeneralSettings(
 
         SettingsGroupSpacer()
         SettingsEntryGroupText(stringResource(R.string.player))
+
+        if (search.input.isBlank() || stringResource(R.string.streaming_player_type).contains(search.input,true)) {
+            EnumValueSelectorSettingsEntry(
+                title = stringResource(R.string.streaming_player_type),
+                selectedValue = streamingPlayerType,
+                onValueSelected = {
+                    streamingPlayerType = it
+                },
+                valueText = {
+                    it.displayName
+                }
+            )
+        }
 
         if (search.input.isBlank() || stringResource(R.string.notification_type).contains(search.input,true)) {
             EnumValueSelectorSettingsEntry(

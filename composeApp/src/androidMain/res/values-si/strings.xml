@@ -954,4 +954,8 @@ CC-BY-SA 3.0</string>
     <string name="midnightodyssey">Midnight Odyssey</string>
     <string name="circle">Circle</string>
     <string name="enter_hex">Enter the 7-digit HEX code</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>

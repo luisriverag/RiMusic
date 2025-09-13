@@ -371,6 +371,7 @@ const val volumeBoostLevelKey = "volumeBoostLevel"
 const val dnsOverHttpsTypeKey = "dnsOverHttpsType"
 const val customDnsOverHttpsServerKey = "customDnsOverHttpsServer"
 const val enablePreCacheKey = "enablePreCache"
+const val streamingPlayerTypeKey = "streamingPlayerType"
 
 
 /*

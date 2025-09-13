@@ -12,6 +12,7 @@ import coil.request.CachePolicy
 import it.fast4x.rimusic.enums.CoilDiskCacheMaxSize
 import it.fast4x.rimusic.utils.CaptureCrash
 import it.fast4x.rimusic.utils.FileLoggingTree
+import it.fast4x.rimusic.utils.InitializeEnvironment
 import it.fast4x.rimusic.utils.coilCustomDiskCacheKey
 import it.fast4x.rimusic.utils.coilDiskCacheMaxSizeKey
 import it.fast4x.rimusic.utils.getEnum
@@ -95,5 +96,6 @@ object Dependencies {
     internal fun init(application: MainApplication) {
         this.application = application
         DatabaseInitializer()
+        InitializeEnvironment( this.application )
     }
 }

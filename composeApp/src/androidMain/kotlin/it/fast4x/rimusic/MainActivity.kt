@@ -19,6 +19,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
+import android.view.Window
+import android.view.WindowInsetsController
 import android.view.WindowManager
 import android.window.OnBackInvokedDispatcher
 import androidx.activity.ComponentActivity
@@ -63,7 +65,6 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -88,7 +89,10 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.os.LocaleListCompat
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaItem
@@ -110,8 +114,6 @@ import it.fast4x.environment.Environment
 import it.fast4x.environment.models.bodies.BrowseBody
 import it.fast4x.environment.requests.playlistPage
 import it.fast4x.environment.requests.song
-import it.fast4x.environment.utils.EnvironmentPreferenceItem
-import it.fast4x.environment.utils.EnvironmentPreferences
 import it.fast4x.environment.utils.LocalePreferenceItem
 import it.fast4x.environment.utils.LocalePreferences
 import it.fast4x.environment.utils.ProxyPreferenceItem
@@ -131,7 +133,6 @@ import it.fast4x.rimusic.enums.PipModule
 import it.fast4x.rimusic.enums.PlayerBackgroundColors
 import it.fast4x.rimusic.enums.PopupType
 import it.fast4x.rimusic.enums.ThumbnailRoundness
-import it.fast4x.rimusic.extensions.connectivity.InternetConnectivityObserver
 import it.fast4x.rimusic.extensions.pip.PipEventContainer
 import it.fast4x.rimusic.extensions.pip.PipModuleContainer
 import it.fast4x.rimusic.extensions.pip.PipModuleCover
@@ -159,7 +160,6 @@ import it.fast4x.rimusic.utils.LocalMonetCompat
 import it.fast4x.rimusic.utils.OkHttpRequest
 import it.fast4x.rimusic.extensions.rescuecenter.RescueScreen
 import it.fast4x.rimusic.ui.screens.settings.isYouTubeLoggedIn
-import it.fast4x.rimusic.utils.InitializeEnvironment
 import it.fast4x.rimusic.utils.UiTypeKey
 import it.fast4x.rimusic.utils.animatedGradientKey
 import it.fast4x.rimusic.utils.applyFontPaddingKey
@@ -198,7 +198,6 @@ import it.fast4x.rimusic.utils.fontTypeKey
 import it.fast4x.rimusic.utils.forcePlay
 import it.fast4x.rimusic.utils.getEnum
 import it.fast4x.rimusic.utils.getSystemlanguage
-import it.fast4x.rimusic.utils.intent
 import it.fast4x.rimusic.utils.invokeOnReady
 import it.fast4x.rimusic.utils.isAtLeastAndroid6
 import it.fast4x.rimusic.utils.isAtLeastAndroid8
@@ -238,7 +237,6 @@ import it.fast4x.rimusic.utils.useSystemFontKey
 import it.fast4x.rimusic.utils.ytCookieKey
 import it.fast4x.rimusic.utils.ytDataSyncIdKey
 import it.fast4x.rimusic.utils.ytVisitorDataKey
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
@@ -341,6 +339,26 @@ class MainActivity :
         )
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+
+
+        /***********/
+        // TODO() enable fullscreen mode
+        // Old method to hide status bar
+        // requestWindowFeature(Window.FEATURE_NO_TITLE)
+        // this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
+        // New method to hide system bars
+//        val windowInsetsController =
+//            WindowCompat.getInsetsController(window, window.decorView)
+//        // Configure the behavior of the hidden system bars.
+//        windowInsetsController.systemBarsBehavior =
+//            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+//
+//        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+////        windowInsetsController.hide(WindowInsetsCompat.Type.statusBars())
+////        windowInsetsController.hide(WindowInsetsCompat.Type.navigationBars())
+        /***********/
 
         MonetCompat.setup(this)
         _monet = MonetCompat.getInstance()
@@ -527,9 +545,9 @@ class MainActivity :
                 }
 
 
-                InitializeEnvironment(
-                    appContext()
-                )
+//                InitializeEnvironment(
+//                    appContext()
+//                )
 
 
                 val coroutineScope = rememberCoroutineScope()

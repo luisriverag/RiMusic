@@ -47,8 +47,6 @@ fun InitDownloader() {
 @UnstableApi
 @Composable
 fun downloadedStateMedia(mediaId: String): DownloadedStateMedia {
-    if (mediaId.isBlank() || mediaId.isEmpty()) return DownloadedStateMedia.NOT_CACHED_OR_DOWNLOADED
-
 
     val binder = LocalPlayerServiceBinder.current
 
@@ -70,12 +68,15 @@ fun downloadedStateMedia(mediaId: String): DownloadedStateMedia {
     }
 
     // If cache is in error return
-    if (cachedBytes == -1L || downloadedBytes == -1L) return DownloadedStateMedia.NOT_CACHED_OR_DOWNLOADED
+    if (cachedBytes == -1L || downloadedBytes == -1L) {
+        println("downloadedStateMedia error: mediaId $mediaId cachedBytes $cachedBytes downloadedBytes $downloadedBytes")
+        return DownloadedStateMedia.NOT_CACHED_OR_DOWNLOADED
+    }
 
     var mediaFormatContentLenght by remember(mediaId) { mutableLongStateOf(0L) }
     LaunchedEffect(mediaId) {
         Database.format(mediaId).distinctUntilChanged().collectLatest { format ->
-            mediaFormatContentLenght = format?.contentLength ?: Long.MAX_VALUE
+            mediaFormatContentLenght = format?.contentLength ?: 0L
         }
     }
 
@@ -83,18 +84,12 @@ fun downloadedStateMedia(mediaId: String): DownloadedStateMedia {
     LaunchedEffect(mediaId) {
         MyDownloadHelper.getDownload(mediaId).collect { download ->
             isDownloaded = download?.state == Download.STATE_COMPLETED
-                    && (downloadedBytes ?: 0L) >= mediaFormatContentLenght
         }
     }
 
 
 
     var isCached by remember(mediaId) { mutableStateOf(false) }
-//    LaunchedEffect(mediaId) {
-//        Database.format(mediaId).distinctUntilChanged().collectLatest { format ->
-//           isCached = format?.contentLength == cachedBytes
-//        }
-//    }
     isCached = when (cachedBytes){
         0L -> false
         null -> false
@@ -135,7 +130,7 @@ fun manageDownload(
 
 @UnstableApi
 fun preCacheMedia(
-    context: android.content.Context,
+    context: Context,
     mediaItem: MediaItem
 ) {
     if (mediaItem.isLocal || !isNetworkConnected(appContext())) return

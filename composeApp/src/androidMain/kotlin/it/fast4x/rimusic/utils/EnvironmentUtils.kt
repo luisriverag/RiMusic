@@ -46,6 +46,12 @@ fun InitializeEnvironment(context: Context) {
         p36 = context.resources.getString(R.string.env_fqqhBZd0cf),
         p37 = context.resources.getString(R.string.env_9sZKrkMg8p),
         p38 = context.resources.getString(R.string.env_aQpNCVOe2i),
+        p39 = context.resources.getString(R.string.env_XNl2TKXLlB),
+        p40 = context.resources.getString(R.string.env_yNjbjspY8v),
+        p41 = context.resources.getString(R.string.env_eZueG672lt),
+        p42 = context.resources.getString(R.string.env_WkUFhXtC3G),
+        p43 = context.resources.getString(R.string.env_z4Xe47r8Vs),
+
 
         )
 }

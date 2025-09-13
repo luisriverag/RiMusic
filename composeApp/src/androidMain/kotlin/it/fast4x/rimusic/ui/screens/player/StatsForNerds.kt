@@ -129,65 +129,7 @@ fun StatsForNerds(
         )
         LaunchedEffect(mediaId) {
             Database.format(mediaId).distinctUntilChanged().collectLatest { currentFormat ->
-                if (currentFormat?.itag == null) {
-                    /*
-                    binder.player.currentMediaItem?.takeIf { it.mediaId == mediaId }?.let { mediaItem ->
-                        withContext(Dispatchers.IO) {
-                            delay(2000)
-                            Innertube.player(PlayerBody(videoId = mediaId))?.onSuccess { response ->
-                                response.streamingData?.adaptiveFormats
-                                ?.filter {
-                                when (audioQualityFormat) {
-                                    AudioQualityFormat.Auto -> it.itag == 251 || it.itag == 141 ||
-                                            it.itag == 250 || it.itag == 140 ||
-                                            it.itag == 249 || it.itag == 139 ||
-                                            it.itag == 171
-                                    AudioQualityFormat.High -> it.itag == 251 || it.itag == 141
-                                    AudioQualityFormat.Medium -> it.itag == 250 || it.itag == 140 || it.itag == 171
-                                    AudioQualityFormat.Low -> it.itag == 249 || it.itag == 139
-                                }
-
-                            }
-                                ?.maxByOrNull {
-                                    (it.bitrate?.times(
-                                        when (audioQualityFormat) {
-                                            AudioQualityFormat.Auto -> if (connectivityManager.isActiveNetworkMetered) -1 else 1
-                                            AudioQualityFormat.High -> 1
-                                            AudioQualityFormat.Medium -> -1
-                                            AudioQualityFormat.Low -> -1
-                                        }
-                                    ) ?: -1) + (if (it.mimeType.startsWith("audio/webm")) 10240 else 0)
-                                }
-                                ?.let { format ->
-                                /*
-                                when(audioQualityFormat) {
-                                    AudioQualityFormat.Auto -> response.streamingData?.autoMaxQualityFormat
-                                    AudioQualityFormat.High -> response.streamingData?.highestQualityFormat
-                                    AudioQualityFormat.Medium -> response.streamingData?.mediumQualityFormat
-                                    AudioQualityFormat.Low -> response.streamingData?.lowestQualityFormat
-                                }?.let { format ->
-
-                                 */
-                                    Database.insert(mediaItem)
-                                    Database.insert(
-                                        Format(
-                                            songId = mediaId,
-                                            itag = format.itag,
-                                            mimeType = format.mimeType,
-                                            bitrate = format.bitrate,
-                                            loudnessDb = response.playerConfig?.audioConfig?.normalizedLoudnessDb,
-                                            contentLength = format.contentLength,
-                                            lastModified = format.lastModified
-                                        )
-                                    )
-                                }
-                            }
-                        }
-                    }
-                    */
-                } else {
-                    format = currentFormat
-                }
+                format = currentFormat
             }
         }
 
@@ -201,8 +143,10 @@ fun StatsForNerds(
                     cachedBytes -= span.length
                 }
 
-                override fun onSpanTouched(cache: Cache, oldSpan: CacheSpan, newSpan: CacheSpan) =
+                override fun onSpanTouched(cache: Cache, oldSpan: CacheSpan, newSpan: CacheSpan) {
                     Unit
+                    //cachedBytes -= newSpan.length
+                }
             }
 
             binder.cache.addListener(mediaId, listener)
@@ -371,7 +315,8 @@ fun StatsForNerds(
                 ) {
                     Box(
                         contentAlignment = Alignment.Center,
-                        modifier = modifier.weight(1f)
+                        modifier = modifier
+                            .weight(1f)
                             .padding(end = 4.dp)
                     ) {
                         if (format?.songId?.startsWith(LOCAL_KEY_PREFIX) == false) {

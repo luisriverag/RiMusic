@@ -1,5 +1,6 @@
 package it.fast4x.rimusic.utils
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -70,6 +71,7 @@ fun ShowVideoOrSongInfo(
                         .only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal)
                         .asPaddingValues()
                 )
+                .background(colorPalette().background0)
                 .fillMaxSize()
         ) {
             item(contentType = "InfoTitlePage") {

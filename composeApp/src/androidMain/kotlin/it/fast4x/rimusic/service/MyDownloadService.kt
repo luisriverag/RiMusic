@@ -64,33 +64,28 @@ class MyDownloadService : DownloadService(
         notMetRequirements: Int
     ) = NotificationCompat
         .Builder(
-            /* context = */ this,
-            /* notification = */ MyDownloadHelper
+            this,
+             MyDownloadHelper
                 .getDownloadNotificationHelper(this)
                 .buildProgressNotification(
-                /* context            = */ this,
-                /* smallIcon          = */ R.drawable.download_progress,
-                /* contentIntent      = */ null,
-                /* message            = */ downloadManager.currentDownloads.map { it.request.data }.firstOrNull()
+                 this,
+                 R.drawable.download_progress,
+                 null,
+                 downloadManager.currentDownloads.map { it.request.data }.firstOrNull()
                         ?.let { Util.fromUtf8Bytes(it) } ?: "${downloads.size} in progress",
-                /* downloads          = */ downloads,
-                /* notMetRequirements = */ notMetRequirements
+                 downloads,
+                 notMetRequirements
             )
         )
         .setChannelId(DOWNLOAD_NOTIFICATION_CHANNEL_ID)
         // Add action in notification
-//        .addAction(
-//            NotificationCompat.Action.Builder(
-//                /* icon = */ R.drawable.close,
-//                /* title = */ getString(R.string.cancel),
-//                              notificationActionReceiver.cancel.pendingIntent
-////                /* intent = */ Intent(this,MyDownloadService::class.java).also {
-////                    it.action = notificationActionReceiver.cancel.value
-////                    it.putExtra("id", FOREGROUND_NOTIFICATION_ID + 1)
-////                }
-//            ).build()
-//        )
-
+        .addAction(
+            NotificationCompat.Action.Builder(
+                R.drawable.close,
+                getString(R.string.cancel),
+                notificationActionReceiver.cancel.pendingIntent
+            ).build()
+        )
         .build()
 
     /**
@@ -140,25 +135,8 @@ class MyDownloadService : DownloadService(
 
     inner class NotificationActionReceiver : ActionReceiver("it.fast4x.rimusic.download_notification_action") {
         val cancel by action { context, intent ->
-            runCatching {
-//                sendSetStopReason(
-//                     context,
-//                     MyDownloadService::class.java,
-//                     ACTION_SET_STOP_REASON,
-//                     intent.getIntExtra("id", 0),
-//                    true
-//                    )
-                sendPauseDownloads(
-                    /* context         = */ context,
-                    /* clazz           = */ MyDownloadService::class.java,
-                    /* foreground      = */ true
-                )
-            }.recoverCatching {
-                sendPauseDownloads(
-                    /* context         = */ context,
-                    /* clazz           = */ MyDownloadService::class.java,
-                    /* foreground      = */ false
-                )
+            downloadManager.currentDownloads.forEach { download ->
+                downloadManager.removeDownload(download.request.id)
             }
         }
     }

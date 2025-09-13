@@ -490,9 +490,9 @@ fun HomeSongs(
                                     if (excludeSongWithDurationLimit == DurationInMinutes.Disabled)
                                         true
                                     else
-                                        item.song.durationText?.let { it1 ->
+                                        (item.song.durationText?.let { it1 ->
                                             durationTextToMillis(it1)
-                                        }!! < excludeSongWithDurationLimit.minutesInMilliSeconds
+                                        } ?: 0L) < excludeSongWithDurationLimit.minutesInMilliSeconds
                                 }
                             }
                     } else {
@@ -506,9 +506,9 @@ fun HomeSongs(
                                     if (excludeSongWithDurationLimit == DurationInMinutes.Disabled)
                                         true
                                     else
-                                        item.song.durationText?.let { it1 ->
+                                        (item.song.durationText?.let { it1 ->
                                             durationTextToMillis(it1)
-                                        }!! < excludeSongWithDurationLimit.minutesInMilliSeconds
+                                        } ?: 0L) < excludeSongWithDurationLimit.minutesInMilliSeconds
                                 }
                             }
                     }

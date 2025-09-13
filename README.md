@@ -1,21 +1,18 @@
 <div align="center">
   <img src="./assets/design/latest/app_logo.svg" width="300" height="100" />    
-  <p><b>RiMusic</b> is a <b>multilingual</b> Android application for streaming music.</p>
+  <p><b>RiMusic</b> is a <b>multilingual</b> and <b>multiplatform</b> application for streaming music.</p>
   <p>It began as an <b>extension</b> of <b>ViMusic</b>, then acquired its own identity.</p>
 <p><b>It allows the user to customize it at will.</b></p>
 <p><b>RiMusic does not collect any data.</b></p>
 
-  <a href="https://github.com/fast4x/RiMusic/releases"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/total?label=Total%20Downloads"></a>
-  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/downloads/fast4x/RiMusic/latest/total?label=Downloads%20of%20latest%20Release"></a>
-  <a href="https://github.com/fast4x/RiMusic/releases/latest"><img src="https://img.shields.io/github/v/release/fast4x/RiMusic?label=Release"></a>
 </div>
+
+## ❗ Info
+This project, is closed.
 
 ## ✨ Features
 - **Multilingual:** English, Italian, German, Russian, French, Spanish, Czech, Turkish, Romanian and more. Contributions for other languages are welcome
 - UI Mode, swtich from RiMusic to classic ViMusic style, viceversa
-- Auto cache songs for offline playback with a custom cache size
-- Download songs or entire playlists for offline playback (not cache) 
-- Background playback
 - Listening statistics
 - Audio visualizer on player with many type of effects.
   - THIS FEATURE REQUIRES MIC PERMISSION, ONLY AVAILABLE IF ACTIVATED FROM SETTINGS. [Full list of permissions](https://github.com/fast4x/RiMusic/wiki/FAQs#what-permissions-are-used)
@@ -102,10 +99,10 @@ WARNING, the custom version is **not** an official release, download only if inv
 
 ## ❓ FAQs
 - [Wiki page FAQs](https://github.com/fast4x/RiMusic/wiki/FAQs)
-- [Group on Telegram ](https://t.me/rimusic_app)
+- [Group on Telegram ](https://t.me/rimusic_app_official)
 - [Community on Reddit](https://www.reddit.com/r/RiMusicApp/)
-- [Server on Discord](https://discord.gg/h7eS2PcGeW)
 
+<!--
 ## 🤝 Contributing
 **Pull requests are welcome**
 - If you want:
@@ -115,6 +112,8 @@ WARNING, the custom version is **not** an official release, download only if inv
 
 ### 🔤 Translations
 - Go to [Crowdin](https://crowdin.com/project/rimusic/invite?h=73f0e6b64be1c64a8aebd467d286cf851925330), help with the translations.
+-->
+
 
 ### 🤝 **Developer /../ Designer that contribute:**
 
@@ -122,9 +121,9 @@ WARNING, the custom version is **not** an official release, download only if inv
 <tr>
     <td align="center" style="word-wrap: break-word; width: 90.0; height: 90.0">
         <a href=https://github.com/fast4x>
-            <img src=https://avatars.githubusercontent.com/u/1484476?v=4 width="60;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Rino Russo/>
+            <img src=https://avatars.githubusercontent.com/u/1484476?v=4 width="60;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Fast4x/>
             <br />
-            <sub style="font-size:14px"><b>Rino Russo</b></sub>
+            <sub style="font-size:14px"><b>Fast4x</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 90.0; height: 90.0">
@@ -445,33 +444,6 @@ WARNING, the custom version is **not** an official release, download only if inv
     
 </tr>
 </table>
-<!--
-- [25huizengek1](https://github.com/25huizengek1)
-- [821938089](https://github.com/821938089)
-- [aneesh1122](https://github.com/aneesh1122)
-- [Abhinavreddy-B](https://github.com/Abhinavreddy-B)
-- [bbyeen](https://github.com/bbyeen)
-- [Craeckie](https://github.com/Craeckie)
-- [DanielSevillano](https://github.com/DanielSevillano)
-- [fast4x](https://github.com/fast4x)
-- [ikanakova](https://github.com/ikanakova)
-- [iscle](https://github.com/iscle)
-- [jaimtres](https://github.com/jaimtres)
-- [JZITNIK](https://github.com/jzitnik-dev)
-- [KyNarec](https://github.com/KyNarec)
-- [knighthat](https://github.com/knighthat)
-- [locxter](https://github.com/locxter)
-- [lrusso96](https://github.com/lrusso96)
-- [martkol](https://github.com/martkol)
-- [ov1d1u ](https://github.com/ov1d1u)
-- [roklc](https://github.com/roklc)
-- [sharunkumar](https://github.com/sharunkumar/sharunkumar)
-- [SuhasDissa](https://github.com/SuhasDissa)
-- [twistios](https://github.com/twistios)
-- [wispl](https://github.com/wispl)
-- [chayotic](https://github.com/chayotic)
--->  
-
 
 ## 🫂 Acknowledgments
 - [**ViMusic**](https://github.com/vfsfitvnm/ViMusic)
@@ -489,6 +461,4 @@ WARNING, the custom version is **not** an official release, download only if inv
 
 
 ## ❗ Disclaimer
-This project, its contents are not affiliated with, funded, authorized, endorsed by, or in any way associated with YouTube, Google LLC or any of its affiliates, subsidiaries.
-
-Any trademark, service mark, trade name, or other intellectual property rights used in this project are owned by the respective owners.
+This project, is for educational purpose

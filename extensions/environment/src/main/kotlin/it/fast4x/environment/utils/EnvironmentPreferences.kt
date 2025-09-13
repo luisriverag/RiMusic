@@ -56,5 +56,9 @@ data class EnvironmentPreferenceItem(
     var p39: String? = null,
     var p40: String? = null,
     var p41: String? = null,
+    var p42: String? = null,
+    var p43: String? = null,
+    var p44: String? = null,
+    var p45: String? = null,
 
 )

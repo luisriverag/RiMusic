@@ -6,6 +6,7 @@ import it.fast4x.environment.models.BrowseEndpoint
 import it.fast4x.environment.models.BrowseResponse
 import it.fast4x.environment.models.Context
 import it.fast4x.environment.models.CreatePlaylistResponse
+import it.fast4x.environment.models.MediaType
 import it.fast4x.environment.models.NavigationEndpoint
 import it.fast4x.environment.models.PlayerResponse
 import it.fast4x.environment.models.VideoOrSongInfo
@@ -342,7 +343,7 @@ object EnvironmentExt {
         return PlaylistPage(
             playlist = Environment.PlaylistItem(
                 info = Environment.Info(
-                    name = header?.title?.runs?.firstOrNull()?.text!!,
+                    name = header?.title?.runs?.firstOrNull()?.text,
                     endpoint = NavigationEndpoint.Endpoint.Browse(
                         browseId = playlistId,
                     )
@@ -545,13 +546,25 @@ object EnvironmentExt {
         println("EnvironmentExt addPlaybackToHistory error: ${it.stackTraceToString()}")
     }
 
-    //****************************************************************************************
-    suspend fun simplePlayer(videoId: String, playlistId: String? = null, client: Context.Client, signatureTimestamp: Int? = null): Result<PlayerResponse> = runCatching {
-        Environment.simplePlayer(client, videoId, playlistId, signatureTimestamp).body<PlayerResponse>()
+    /**************
+     * Simple player without use of potoken
+     */
+    suspend fun simplePlayer(videoId: String, playlistId: String? = null, client: Context.Client, signatureTimestamp: Int? = null, webPlayerPot: String? = null): Result<PlayerResponse> = runCatching {
+        Environment.simplePlayer(client, videoId, playlistId, signatureTimestamp, webPlayerPot).body<PlayerResponse>()
     }.onFailure {
         println("EnvironmentExt simplePlayer error: ${it.stackTraceToString()}")
     }
-    //*****************************************************************************************
+
+    /*************
+     * Simple player with use of potoken
+     */
+
+    suspend fun simplePlayerWithPotoken(videoId: String, playlistId: String? = null): Result<Triple<String?, PlayerResponse?, MediaType>> = runCatching {
+        Environment.simplePlayerWithPoToken(videoId, playlistId).getOrNull()!!
+    }.onFailure {
+        println("EnvironmentExt simplePlayerWithPotoken error: ${it.stackTraceToString()}")
+    }
+
 
 
 }

@@ -61,9 +61,9 @@ fun HomeScreen(
     openTabFromShortcut: Int
 ) {
 
-    InitializeEnvironment(
-        appContext()
-    )
+//    InitializeEnvironment(
+//        appContext()
+//    )
 
 
     var showNewversionDialog by remember {

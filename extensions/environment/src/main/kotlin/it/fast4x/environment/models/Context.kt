@@ -36,6 +36,7 @@ data class Context(
         val loginSupported: Boolean = false,
         val loginRequired: Boolean = false,
         val useSignatureTimestamp: Boolean = false,
+        val useWebPoTokens: Boolean = false,
         val isEmbedded: Boolean = false,
         // val origin: String? = null,
         // val referer: String? = null,
@@ -107,13 +108,14 @@ data class Context(
             client = Client(
                 clientName = cname,
                 clientVersion = cver,
-                platform = cplatform,
+                //platform = cplatform,
                 userAgent = USER_AGENT,
-                referer = REFERER1,
+                //referer = REFERER1,
                 visitorData = Environment.visitorData,
                 xClientName = cxname.toIntOrNull(),
                 loginSupported = true,
                 useSignatureTimestamp = true,
+                useWebPoTokens = true,
             )
         )
 
@@ -135,6 +137,7 @@ data class Context(
                 clientName = cname2,
                 clientVersion = cver2,
                 userAgent = USER_AGENT,
+                xClientName = 1
             )
         )
 
@@ -155,11 +158,11 @@ data class Context(
             client = Client(
                 clientName = cname3,
                 clientVersion = cver3,
-                deviceMake = dmake,
-                deviceModel = dmodel,
-                osName = osname,
+                //deviceMake = dmake,
+                //deviceModel = dmodel,
+                //osName = osname,
                 osVersion = osversion,
-                acceptHeader = accept,
+                //acceptHeader = accept,
                 userAgent = USER_AGENT1,
                 xClientName = cxname3.toIntOrNull()
             )

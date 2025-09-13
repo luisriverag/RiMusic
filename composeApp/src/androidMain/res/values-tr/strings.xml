@@ -953,4 +953,8 @@
     <string name="midnightodyssey">Geceyarısı Destanı</string>
     <string name="circle">Çember</string>
     <string name="enter_hex">7 haneli HEX kodunu girin</string>
+    <string name="streaming_player_type_default">Default</string>
+    <string name="streaming_player_type_next">Next</string>
+    <string name="streaming_player_type">Streaming player type</string>
+    <string name="streaming_player_type_advanced">Advanced</string>
 </resources>

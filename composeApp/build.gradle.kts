@@ -334,6 +334,31 @@ android {
             "env_aQpNCVOe2i",
             propertyOrEmpty("aQpNCVOe2i")
         )
+        resValue(
+            "string",
+            "env_XNl2TKXLlB",
+            propertyOrEmpty("XNl2TKXLlB")
+        )
+        resValue(
+            "string",
+            "env_yNjbjspY8v",
+            propertyOrEmpty("yNjbjspY8v")
+        )
+        resValue(
+            "string",
+            "env_eZueG672lt",
+            propertyOrEmpty("eZueG672lt")
+        )
+        resValue(
+            "string",
+            "env_WkUFhXtC3G",
+            propertyOrEmpty("WkUFhXtC3G")
+        )
+        resValue(
+            "string",
+            "env_z4Xe47r8Vs",
+            propertyOrEmpty("z4Xe47r8Vs")
+        )
         // INIT ENVIRONMENT
     }
 

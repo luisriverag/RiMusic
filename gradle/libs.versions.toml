@@ -125,7 +125,7 @@ ksoup-html = { group = "com.mohamedrejeb.ksoup", name = "ksoup-html", version.re
 ksoup-entities = { group = "com.mohamedrejeb.ksoup", name = "ksoup-entities", version.ref = "ksoup" }
 newpipe-extractor = { group = "com.github.TeamNewPipe", name = "NewPipeExtractor", version = "v0.24.5" } #before was used v0.24.3
 nanojson = { group = "com.github.TeamNewPipe", name = "nanojson", version = "1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751" }
-androidx-webkit = { group = "androidx.webkit", name = "webkit", version = "1.9.0" }
+androidx-webkit = { group = "androidx.webkit", name = "webkit", version = "1.13.0" }
 okhttp-dnsoverhttps = { group = "com.squareup.okhttp3", name = "okhttp-dnsoverhttps", version.ref = "okhttpDnsOverHttps" }
 room-backup = { group = "de.raphaelebner", name = "roomdatabasebackup", version = "1.0.2" }
 reorderable = { module = "sh.calvin.reorderable:reorderable", version.ref = "reorderable" }

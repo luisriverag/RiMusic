@@ -243,7 +243,7 @@ class MediaLibrarySessionCallback (
                                 )
                             }
 
-                        PlayerServiceModern.ALBUM -> database.albumsByRowIdAsc().first()
+                        PlayerServiceModern.ALBUM -> database.albumsByRowIdDesc().first()
                             .map { album ->
                                 browsableMediaItem(
                                     "${PlayerServiceModern.ALBUM}/${album.id}",
@@ -472,7 +472,7 @@ class MediaLibrarySessionCallback (
                                             }
                                     }
 
-                                    else -> database.sortSongsFromPlaylistByRowId(playlistId.toLong())
+                                    else -> database.sortSongsPlaylistByPosition(playlistId.toLong())
                                         .map { list ->
                                             list.map { it.song }
                                         }
@@ -608,7 +608,7 @@ class MediaLibrarySessionCallback (
                                 }
                         }
 
-                        else -> database.sortSongsFromPlaylistByRowId(playlistId.toLong())
+                        else -> database.sortSongsPlaylistByPosition(playlistId.toLong())
                             .map { list ->
                                 list.map { it }
                             }
@@ -638,7 +638,7 @@ class MediaLibrarySessionCallback (
                 0,
                 0
             )
-        if(!context.preferences.getBoolean(persistentQueueKey, false))
+        if(!context.preferences.getBoolean(persistentQueueKey, true))
             return Futures.immediateFuture(defaultResult)
 
         scope.future {

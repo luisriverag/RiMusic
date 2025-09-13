@@ -345,7 +345,7 @@ fun InfoAlbumAndArtistModern(
                 onClick = {
                     if (artistIds?.isNotEmpty() == true && artistIds.size > 1)
                         showSelectDialog = true
-                    if (artistIds?.isNotEmpty() == true && artistIds.size == 1) {
+                    if (artistIds?.isNotEmpty() == true && artistIds.size == 1 && artistIds.firstOrNull()?.id != "") {
                         //onGoToArtist( artistIds[0].id )
                         navController.navigate(route = "${NavRoutes.artist.name}/${artistIds[0].id}")
                         //layoutState.collapseSoft()
@@ -370,7 +370,7 @@ fun InfoAlbumAndArtistModern(
                 onClick = {
                     if (artistIds?.isNotEmpty() == true && artistIds.size > 1)
                         showSelectDialog = true
-                    if (artistIds?.isNotEmpty() == true && artistIds.size == 1) {
+                    if (artistIds?.isNotEmpty() == true && artistIds.size == 1 && artistIds.firstOrNull()?.id != "") {
                         navController.navigate(route = "${NavRoutes.artist.name}/${artistIds[0].id}")
                         onCollapse()
                     }

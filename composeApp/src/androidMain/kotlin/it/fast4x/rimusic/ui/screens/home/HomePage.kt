@@ -58,8 +58,6 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.offline.Download
 import androidx.navigation.NavController
-import it.fast4x.compose.persist.persist
-import it.fast4x.compose.persist.persistList
 import it.fast4x.environment.Environment
 import it.fast4x.environment.EnvironmentExt
 import it.fast4x.environment.models.NavigationEndpoint
@@ -174,31 +172,43 @@ fun HomePage(
     val windowInsets = LocalPlayerAwareWindowInsets.current
     var playEventType by rememberPreference(playEventsTypeKey, PlayEventsType.MostPlayed)
 
-    var trending by persist<Song?>("home/trending")
-    val trendingInit by persist<Song?>(tag = "home/trending")
+    //var trending by persist<Song?>("home/trending")
+    var trending by remember { mutableStateOf<Song?>(null) }
+    //val trendingInit by persist<Song?>(tag = "home/trending")
+    val trendingInit by remember { mutableStateOf<Song?>(null) }
     var trendingPreference by rememberPreference(quickPicsTrendingSongKey, trendingInit)
 
-    var relatedPageResult by persist<Result<Environment.RelatedPage?>?>(tag = "home/relatedPageResult")
-    var relatedInit by persist<Environment.RelatedPage?>(tag = "home/relatedPage")
+    //var relatedPageResult by persist<Result<Environment.RelatedPage?>?>(tag = "home/relatedPageResult")
+    var relatedPageResult by remember { mutableStateOf<Result<Environment.RelatedPage?>?>(null) }
+    //var relatedInit by persist<Environment.RelatedPage?>(tag = "home/relatedPage")
+    var relatedInit by remember { mutableStateOf<Environment.RelatedPage?>(null) }
     var relatedPreference by rememberPreference(quickPicsRelatedPageKey, relatedInit)
 
-    var discoverPageResult by persist<Result<Environment.DiscoverPage?>>("home/discoveryAlbums")
-    var discoverPageInit by persist<Environment.DiscoverPage>("home/discoveryAlbums")
+    //var discoverPageResult by persist<Result<Environment.DiscoverPage?>>("home/discoveryAlbums")
+    var discoverPageResult by remember { mutableStateOf<Result<Environment.DiscoverPage?>?>(null) }
+    //var discoverPageInit by persist<Environment.DiscoverPage>("home/discoveryAlbums")
+    var discoverPageInit by remember { mutableStateOf<Environment.DiscoverPage?>(null) }
     var discoverPagePreference by rememberPreference(quickPicsDiscoverPageKey, discoverPageInit)
 
-    var homePageResult by persist<Result<HomePage?>>("home/homePage")
-    var homePageInit by persist<HomePage?>("home/homePage")
+    //var homePageResult by persist<Result<HomePage?>>("home/homePage")
+    var homePageResult by remember { mutableStateOf<Result<HomePage?>?>(null) }
+    //var homePageInit by persist<HomePage?>("home/homePage")
+    var homePageInit by remember { mutableStateOf<HomePage?>(null) }
     var homePagePreference by rememberPreference(quickPicsHomePageKey, homePageInit)
 
-    var chartsPageResult by persist<Result<Environment.ChartsPage?>>("home/chartsPage")
-    var chartsPageInit by persist<Environment.ChartsPage>("home/chartsPage")
+    //var chartsPageResult by persist<Result<Environment.ChartsPage?>>("home/chartsPage")
+    var chartsPageResult by remember { mutableStateOf<Result<Environment.ChartsPage?>?>(null) }
+    //var chartsPageInit by persist<Environment.ChartsPage>("home/chartsPage")
+    var chartsPageInit by remember { mutableStateOf<Environment.ChartsPage?>(null) }
 //    var chartsPagePreference by rememberPreference(quickPicsChartsPageKey, chartsPageInit)
 
 
 
-    var preferitesArtists by persistList<Artist>("home/artists")
+    //var preferitesArtists by persistList<Artist>("home/artists")
+    var preferitesArtists by remember { mutableStateOf<List<Artist>>(emptyList()) }
 
-    var localMonthlyPlaylists by persistList<PlaylistPreview>("home/monthlyPlaylists")
+    //var localMonthlyPlaylists by persistList<PlaylistPreview>("home/monthlyPlaylists")
+    var localMonthlyPlaylists by remember { mutableStateOf<List<PlaylistPreview>>(emptyList()) }
     LaunchedEffect(Unit) {
         Database.monthlyPlaylistsPreview("").collect { localMonthlyPlaylists = it }
     }
@@ -749,7 +759,8 @@ fun HomePage(
 
                 discoverPageInit?.let { page ->
 
-                    var newReleaseAlbumsFiltered by persistList<Environment.AlbumItem>("discovery/newalbumsartist")
+                    //var newReleaseAlbumsFiltered by persistList<Environment.AlbumItem>("discovery/newalbumsartist")
+                    var newReleaseAlbumsFiltered by remember { mutableStateOf(emptyList<Environment.AlbumItem>()) }
                     page.newReleaseAlbums.forEach { album ->
                         preferitesArtists.forEach { artist ->
                             if (artist.name == album.authors?.first()?.name) {

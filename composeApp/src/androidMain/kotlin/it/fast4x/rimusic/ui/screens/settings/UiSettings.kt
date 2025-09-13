@@ -241,8 +241,8 @@ fun DefaultUiSettings() {
         ExoPlayerMinTimeForEvent.`20s`
     )
     exoPlayerMinTimeForEvent = ExoPlayerMinTimeForEvent.`20s`
-    var persistentQueue by rememberPreference(persistentQueueKey, false)
-    persistentQueue = false
+    var persistentQueue by rememberPreference(persistentQueueKey, true)
+    persistentQueue = true
     var resumePlaybackOnStart by rememberPreference(resumePlaybackOnStartKey, false)
     resumePlaybackOnStart = false
     var closebackgroundPlayer by rememberPreference(closebackgroundPlayerKey, false)
